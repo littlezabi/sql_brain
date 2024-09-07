@@ -1,0 +1,26 @@
+:root {
+    --color1: #f4e7fb;
+    --color2: #f3dcdc;
+    --color3: #f5bcba;
+    --color4: #e3aadd;
+    --color5: #c8a8e9;
+    --color6: #c3c7f3;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background: var(--color1);
+}
+.cm-content,
+.cm-gutter {
+    min-height: 200px;
+}
+.CodeMirror {
+    height: min-content !important;
+    padding: 14px;
+    font-size: 18px !important;
+    border-radius: 6px;
+    margin: 14px 0 13px;
+    font-family: "JetBrainsMono Nerd Font Mono", "consolas", "monospace" !important;
+}
