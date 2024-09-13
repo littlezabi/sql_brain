@@ -21,7 +21,11 @@
 <x-admin_header />
 
 <body class="text-white bg-slate-800">
-    {{ $slot }}
+    <div style="max-width: 1280px;margin:auto">
+        {{ $slot }}
+    </div>
 </body>
+
+<script src="{{ asset('js/admin_main.js') }}"></script>
 
 </html>

@@ -1,26 +1,495 @@
+@font-face {
+    font-family: "sf_display_pro";
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("./fonts/woff2/SF-Pro-Display-Ultralight.woff2") format("woff2"),
+        url("./fonts/woff/SF-Pro-Display-Ultralight.woff") format("woff"),
+        url("./fonts/ttf/SF-Pro-Display-Ultralight.ttf") format("truetype");
+    type: "font/woff2" /* for WOFF2 */, "font/woff" /* for WOFF */, "font/ttf";
+}
+
+@font-face {
+    font-family: "sf_display_pro";
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url("./fonts/woff2/SF-Pro-Display-Thin.woff2") format("woff2"),
+        url("./fonts/woff/SF-Pro-Display-Thin.woff") format("woff"),
+        url("./fonts/ttf/SF-Pro-Display-Thin.ttf") format("truetype");
+    type: "font/woff2" /* for WOFF2 */, "font/woff" /* for WOFF */, "font/ttf";
+}
+
+@font-face {
+    font-family: "sf_display_pro";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("./fonts/woff2/SF-Pro-Display-Light.woff2") format("woff2"),
+        url("./fonts/woff/SF-Pro-Display-Light.woff") format("woff"),
+        url("./fonts/ttf/SF-Pro-Display-Light.ttf") format("truetype");
+    type: "font/woff2" /* for WOFF2 */, "font/woff" /* for WOFF */, "font/ttf";
+}
+
+@font-face {
+    font-family: "sf_display_pro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./fonts/woff2/SF-Pro-Display-Regular.woff2") format("woff2"),
+        url("./fonts/woff/SF-Pro-Display-Regular.woff") format("woff"),
+        url("./fonts/ttf/SF-Pro-Display-Regular.ttf") format("truetype");
+    type: "font/woff2" /* for WOFF2 */, "font/woff" /* for WOFF */, "font/ttf";
+}
+
+@font-face {
+    font-family: "sf_display_pro";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("./fonts/woff2/SF-Pro-Display-Medium.woff2") format("woff2"),
+        url("./fonts/woff/SF-Pro-Display-Medium.woff") format("woff"),
+        url("./fonts/ttf/SF-Pro-Display-Medium.ttf") format("truetype");
+    type: "font/woff2" /* for WOFF2 */, "font/woff" /* for WOFF */, "font/ttf";
+}
+
+@font-face {
+    font-family: "sf_display_pro";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("./fonts/woff2/SF-Pro-Display-Semibold.woff2") format("woff2"),
+        url("./fonts/woff/SF-Pro-Display-Semibold.woff") format("woff"),
+        url("./fonts/ttf/SF-Pro-Display-Semibold.ttf") format("truetype");
+    type: "font/woff2" /* for WOFF2 */, "font/woff" /* for WOFF */, "font/ttf";
+}
+
+@font-face {
+    font-family: "sf_display_pro";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./fonts/woff2/SF-Pro-Display-Bold.woff2") format("woff2"),
+        url("./fonts/woff/SF-Pro-Display-Bold.woff") format("woff"),
+        url("./fonts/ttf/SF-Pro-Display-Bold.ttf") format("truetype");
+    type: "font/woff2" /* for WOFF2 */, "font/woff" /* for WOFF */, "font/ttf";
+}
+
+@font-face {
+    font-family: "sf_display_pro";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("./fonts/woff2/SF-Pro-Display-Heavy.woff2") format("woff2"),
+        url("./fonts/woff/SF-Pro-Display-Heavy.woff") format("woff"),
+        url("./fonts/ttf/SF-Pro-Display-Heavy.ttf") format("truetype");
+    type: "font/woff2" /* for WOFF2 */, "font/woff" /* for WOFF */, "font/ttf";
+}
+
+@font-face {
+    font-family: "sf_display_pro";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("./fonts/woff2/SF-Pro-Display-Black.woff2") format("woff2"),
+        url("./fonts/woff/SF-Pro-Display-Black.woff") format("woff"),
+        url("./fonts/ttf/SF-Pro-Display-Black.ttf") format("truetype");
+    type: "font/woff2" /* for WOFF2 */, "font/woff" /* for WOFF */, "font/ttf";
+}
+@font-face {
+    font-family: barlow_cond;
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("./fonts/barlow_condensed/BarlowCondensed-Thin.woff2")
+            format("woff2"),
+        url("./fonts/barlow_condensed/BarlowCondensed-Thin.ttf") format("tff");
+}
+@font-face {
+    font-family: barlow_cond;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("./fonts/barlow_condensed/BarlowCondensed-Light.woff2")
+            format("woff2"),
+        url("./fonts/barlow_condensed/BarlowCondensed-Light.ttf") format("tff");
+}
+@font-face {
+    font-family: "barlow_cond";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("./fonts/barlow_condensed/BarlowCondensed-Regular.woff2")
+            format("woff2"),
+        url("./fonts/barlow_condensed/BarlowCondensed-Regular.ttf")
+            format("tff");
+}
+@font-face {
+    font-family: barlow_cond;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("./fonts/barlow_condensed/BarlowCondensed-Medium.woff2")
+            format("woff2"),
+        url("./fonts/barlow_condensed/BarlowCondensed-Medium.tff") format("ttf");
+}
+@font-face {
+    font-family: barlow_cond;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("./fonts/barlow_condensed/BarlowCondensed-SemiBold.woff2")
+            format("woff2"),
+        url("./fonts/barlow_condensed/BarlowCondensed-SemiBold.ttf")
+            format("tff");
+}
+@font-face {
+    font-family: barlow_cond;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("./fonts/barlow_condensed/BarlowCondensed-Bold.woff2")
+            format("woff2"),
+        url("./fonts/barlow_condensed/BarlowCondensed-Bold.tff") format("ttf");
+}
+@font-face {
+    font-family: barlow_cond;
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("./static/style/fonts/barlow_condensed/BarlowCondensed-Black.woff2")
+            format("woff2"),
+        url("./static/style/fonts/barlow_condensed/BarlowCondensed-Black.tff")
+            format("ttf");
+}
+
+.font {
+    font-family: "sf_display_pro", "Inter", "Segoe UI", "consolas", "system-ui";
+}
+
 :root {
+    --primary-font: "sf_display_pro", "Inter", "Segoe UI", "consolas",
+        "system-ui";
+    --secondary-font: "barlow_cond", "sf_display_pro", "Inter", "Segoe UI",
+        "consolas", "system-ui";
+    --codes-font: "JetBrainsMono Nerd Font Mono", "consolas", "monospace" !important;
+    --bg-color: #0e1326;
+    --bg-color2: #060914;
+    --bg-color3: #090d1d;
+    --fg-color: #2d365b;
     --color1: #f4e7fb;
     --color2: #f3dcdc;
     --color3: #f5bcba;
     --color4: #e3aadd;
     --color5: #c8a8e9;
     --color6: #c3c7f3;
+    --body_heading_color: #c4acef;
+}
+body {
+    background: rgb(4, 0, 56);
+    background: radial-gradient(
+        circle,
+        rgba(4, 0, 56, 1) 0%,
+        rgba(2, 33, 77, 1) 50%,
+        rgba(22, 2, 43, 1) 100%
+    );
+    background-position: fixed;
+}
+.search {
+    visibility: hidden;
+}
+.trans-down {
+    animation: trans_down 300ms ease forwards 1;
+}
+@keyframes trans_down {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+.trans-top {
+    animation: trans_top 300ms ease forwards 1;
+}
+@keyframes trans_top {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+/* #search-child{
+    animation: 
+} */
+
+.search a span {
+    transition: color 200ms ease;
+}
+.fade-out {
+    animation: fade_out 300ms ease forwards;
+}
+@keyframes fade_out {
+    100% {
+        opacity: 0;
+    }
+}
+.fade-in {
+    opacity: 0;
+    animation: fade_in 300ms ease forwards;
+}
+@keyframes fade_in {
+    100% {
+        opacity: 1;
+    }
+}
+.search-loading div span {
+    height: 20px;
+    width: 100%;
+    display: block;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #00000000, #ffffff0a, #00000000);
+    animation: loading_search 2s linear infinite;
+    margin: 4px 30px;
+}
+.search-loading div:nth-child(1) span:nth-child(2) {
+    width: 50%;
+}
+.search-loading div:nth-child(1) span:nth-child(1) {
+    width: 30%;
+}
+.search-loading div:nth-child(2) span:nth-child(1) {
+    width: 60%;
+}
+.search-loading div:nth-child(2) span:nth-child(2) {
+    width: 20%;
+}
+@keyframes loading_search {
+    to {
+        background-position-x: 100px;
+    }
+    from {
+        background-position-x: -700px;
+    }
+}
+
+.search-loading div {
+    height: 40px;
+    width: 100%;
+}
+
+.search a:hover > span.linku {
+    color: rgb(148 163 184);
+}
+.bg-color {
+    background: var(--bg-color);
+}
+.bg-color2 {
+    background: var(--bg-color2);
+}
+.bg-color3 {
+    background: var(--bg-color3);
+}
+code {
+    background: #232d3b;
+    padding: 0px 8px;
+    border-radius: 3px;
+    margin: 0 4px;
+    font-family: var(--codes-font) !important;
+}
+div,
+p,
+ul,
+a,
+button {
+    font-family: var(--primary-font);
 }
 
 header {
     height: 60px;
     width: 100%;
-    background: var(--color1);
+    background: #0e1326bb;
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.065);
 }
 .cm-content,
 .cm-gutter {
     min-height: 200px;
 }
-.CodeMirror {
+.CodeMirror,
+pre {
     height: min-content !important;
     padding: 14px;
     font-size: 18px !important;
     border-radius: 6px;
     margin: 14px 0 13px;
-    font-family: "JetBrainsMono Nerd Font Mono", "consolas", "monospace" !important;
+    font-family: var(--codes-font) !important;
+}
+
+#post_body h2,
+#post_body h1 {
+    color: var(--body_heading_color) !important;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0px 0 0;
+}
+#post_body h1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    color: white !important;
+}
+#post_body p {
+    display: block;
+}
+
+#post_body li p {
+    display: inline;
+}
+#post_body h3 {
+    color: var(--body_heading_color) !important;
+    font-size: 21px;
+    margin: 22px 0;
+    display: block;
+    font-weight: 500;
+    text-decoration: underline;
+}
+#post_body ul {
+    display: block;
+    margin: 11px 0 11px 4px;
+    background: var(--bg-color3);
+    padding: 16px;
+    border-radius: 6px;
+}
+
+#post_body strong {
+    font-weight: 600;
+}
+
+#post_body ul span.point {
+    margin-right: 10px;
+}
+#post_body ul li b,
+#post_body ul li strong {
+    font-size: 16px;
+}
+#post_body ul li {
+    display: block;
+    margin-bottom: 10px;
+    list-style: square !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--secondary-font) !important;
+}
+
+/* General table styling */
+#post_body table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 20px;
+    background-color: var(--bg-color3);
+    color: #fff;
+    font-family: var(--primary-font);
+}
+
+#post_body table thead {
+    background-color: var(--bg-color);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+#post_body table thead tr th {
+    padding: 12px 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.112);
+    font-weight: 500;
+}
+
+#post_body table tbody tr {
+    border-bottom: 1px solid #152232;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #fff;
+}
+
+#post_body table tbody tr:nth-child(even) {
+    background-color: var(--bg-color2);
+}
+
+#post_body table tbody tr:hover {
+    background-color: #152232;
+}
+
+#post_body table tbody tr td {
+    padding: 12px 15px;
+    border-right: 1px solid #152232;
+    color: #fff;
+}
+
+#post_body table tbody tr td:last-child {
+    border-right: none;
+}
+
+/* Table footer styling */
+#post_body table tfoot {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+#post_body table tfoot tr td {
+    padding: 12px 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #post_body table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    #post_body table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    #post_body table tbody tr {
+        margin-bottom: 10px;
+        border-bottom: 2px solid #ddd;
+        display: block;
+        padding: 10px;
+    }
+
+    #post_body table tbody tr td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        font-size: 14px;
+        border-right: none;
+        position: relative;
+    }
+
+    #post_body table tbody tr td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        flex-basis: 30%;
+        padding-right: 15px;
+    }
+
+    #post_body table tfoot {
+        display: none;
+    }
 }

@@ -17,6 +17,10 @@
                             <th class="px-6 py-4 text-sm font-medium text-gray-300 border-b border-gray-700">
                                 Default SQL</th>
                             <th class="px-6 py-4 text-sm font-medium text-gray-300 border-b border-gray-700">
+                                Category</th>
+                            <th class="px-6 py-4 text-sm font-medium text-gray-300 border-b border-gray-700">
+                                Slug</th>
+                            <th class="px-6 py-4 text-sm font-medium text-gray-300 border-b border-gray-700">
                                 Create At</th>
                             <th class="px-6 py-4 text-sm font-medium text-gray-300 border-b border-gray-700">
                                 Action</th>
@@ -26,15 +30,15 @@
                         @foreach ($posts as $item)
                             <tr class="hover:bg-gray-700">
                                 <td class="px-6 py-4 text-sm border-b border-gray-700">{{ $item->title }}</td>
-                                <td class="px-6 py-4 text-sm border-b border-gray-700">{{ $item->body }}</td>
+                                <td class="px-6 py-4 text-sm border-b border-gray-700">
+                                    {{ substr($item->body, 0, 100) }}...
+                                </td>
                                 <td class="px-6 py-4 text-sm border-b border-gray-700">{{ $item->default_sql }}</td>
+                                <td class="px-6 py-4 text-sm border-b border-gray-700">{{ $item->category->title }}</td>
+                                <td class="px-6 py-4 text-sm border-b border-gray-700">{{ $item->slug }}</td>
                                 <td class="px-6 py-4 text-sm border-b border-gray-700">{{ $item->created_at }}</td>
                                 <td class="px-6 py-4 text-sm border-b border-gray-700">
-                                    <a href="/admin/posts/delete/{{ $item->id }}"
-                                        class="text-red-500 underline font-semibold">
-                                        Delete
-                                    </a>
-                                    <a href="/admin/posts/edit/{{ $item->id }}"
+                                    <a href="/admin/posts/{{ $item->id }}"
                                         class="text-blue-500 ml-2 underline font-semibold">
                                         Edit
                                     </a>
@@ -43,7 +47,7 @@
                         @endforeach
                     </tbody>
                 </table>
-
+                <x-message />
             </div>
             <div class="mt-10 mx-4">
                 {{ $posts->links() }}

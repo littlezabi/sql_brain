@@ -13,15 +13,23 @@
     <title>{{ $pageTitle }} | SQL Brain</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/monokai.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/ayu-mirage.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/sql/sql.min.js"></script>
-
+    {{-- <script>
+        const Categories = @json($cats_all);
+    </script> --}}
 </head>
 <x-headers />
 
-<body class="text-white bg-slate-800">
-    {{ $slot }}
+<body class="text-white">
+    <x-search />
+    <div style="max-width: 1280px;margin:auto;position:relative" class="relative">
+        {{ $slot }}
+    </div>
 </body>
+<x-footer />
+<script src="{{ asset('js/main.js') }}"></script>
 
 </html>
