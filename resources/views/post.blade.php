@@ -10,7 +10,7 @@
         <div></div>
         <div class="mt-24 rounded-md mr-3 ml-20" style="width: 65%">
             <section class="px-5">
-                <h1 class="text-6xl font-bold">{{ $item->title }}</h1>
+                <h1 class="text-6xl font-bold" style="line-height:1.3">{{ $item->title }}</h1>
                 <div class="tags my-4">
                     <span class="bg-green-500 px-1 py-1 mr-1 capitalize rounded text-sm">mysql</span>
                     <span class="bg-green-500 px-1 py-1 mr-1 capitalize rounded text-sm">mysql</span>
@@ -31,10 +31,17 @@
                 <div>
                     <h2 class="text-xl mb-2 mt-8">Related Topics</h2>
                     <ul>
-                        <li>
-                            <a href="#" class="ml-3 underline text-slate-300 hover:text-white transition">how to
-                                create MySQL Database?</a>
-                        </li>
+
+                        @foreach ($related as $item)
+                            <li>
+
+                                <a href="#"
+                                    class="ml-3 text-slate-300 hover:text-white hover:underline transition">how
+                                    to
+                                    {{ $item->title }}</a>
+
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </section>

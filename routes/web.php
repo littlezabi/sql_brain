@@ -5,16 +5,11 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ApiController;
 use App\Http\Controllers\ClientController;
 
-Route::controller(ClientController::class)->group(function () {
-    Route::get('/', 'home');
-    Route::get('/{category:slug}/{post:slug}', 'getPost');
-});
-Route::controller(ApiController::class)->group(function () {
-    Route::get('/api/slug/{slug}', 'checkSlug');
-    Route::get('/api/search/{search_query}', 'search');
-});
 Route::controller(AdminController::class)->group(function () {
     Route::get('/admin', 'dashboard');
+    Route::post('/admin/user/new', 'admin_new');
+    Route::get('/admin/register', 'register');
+    Route::get('/admin/login', 'login');
     Route::get('/admin/posts', 'all');
     Route::get('/admin/posts/new', 'new');
     Route::get('/admin/posts/{post}', 'edit');
@@ -27,4 +22,13 @@ Route::controller(AdminController::class)->group(function () {
     Route::post('/admin/categories/', 'store_category');
     Route::patch('/admin/categories/{category}', 'update_category');
     Route::delete('/admin/categories/{category}', 'delete_category');
+});
+
+Route::controller(ClientController::class)->group(function () {
+    Route::get('/', 'home');
+    Route::get('/{category:slug}/{post:slug}', 'getPost');
+});
+Route::controller(ApiController::class)->group(function () {
+    Route::get('/api/slug/{slug}', 'checkSlug');
+    Route::get('/api/search/{search_query}', 'search');
 });

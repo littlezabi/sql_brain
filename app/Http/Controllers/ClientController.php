@@ -40,6 +40,11 @@ class ClientController extends Controller
     }
     public function getPost(Categories $category, Posts $post)
     {
-        return view("post", ['item' => $post, 'category' => $category, 'categories' => ClientController::getCatsAndPosts()]);
+        $relatedPosts = Posts::select('title', 'categories_id', 'slug', 'id')
+            ->where('categories_id', $post->categories_id)
+            ->where('id', '!=', $post->id)
+            ->take(10)
+            ->get();
+        return view("post", ['related' => $relatedPosts, 'item' => $post, 'category' => $category, 'categories' => ClientController::getCatsAndPosts()]);
     }
 }

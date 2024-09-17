@@ -4,10 +4,29 @@ namespace App\Http\Controllers;
 
 use App\Models\Categories;
 use App\Models\Posts;
+use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    public function admin_new(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'fullname' => ['reqiured', 'string', 'max:255'],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class]
+        ]);
+        dd(request());
+        return 'hello';
+    }
+    public function register()
+    {
+        return view('admin.register');
+    }
+    public function login()
+    {
+        return view('admin.login');
+    }
     public function dashboard()
     {
         return view('admin.dashboard');

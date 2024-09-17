@@ -23,6 +23,7 @@ class ApiController extends Controller
                     ->where('title', 'LIKE', "%" . ApiController::$search . "%")
                     ->orderBy('created_at', 'desc');
             }])
+            ->take(10)
             ->get();
         $results = [];
         $c = 0;

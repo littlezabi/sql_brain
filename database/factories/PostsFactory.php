@@ -58,6 +58,15 @@ class PostsFactory extends Factory
         }
         return false;
     }
+    public function prompt($text)
+    {
+        return "
+                        $text. please breifly explain
+                        this topic in simple and easy language. add a img tag with link of a image from any website on server if any image is needed. create long text as you can.  add title of the topics in h1 tags. use as a teacher tune.  also use emojies is needed to beautify the text.
+                        again please define the text briefly in easy and simple language with above prompts.
+                    ";
+    }
+
     public function loadTopics()
     {
         $jsonData = File::get(database_path('factories/mysql_topics.json'));
@@ -75,13 +84,7 @@ class PostsFactory extends Factory
                 echo $topic_id;
                 echo ') ';
                 if ($topic_id <= 164) continue;
-                $response = PostsFactory::generateGeminiContent("
-                        This is MySQL chapter `{$item['title']}` and topic is `{$topic}`. please breifly explain
-                        this topic in simple and easy language. add a img tag with link of a image from any website on server if any image is needed. create long text as you can. use h1, h2, h3..., headings instead of # for heading text. add title of the topics in h1 tags. use as a teacher tune. also use b tags instead of ** for boldness. and use ul and li for listing. also use emojies is needed to beautify the text.
-                        and use html tags for formatting like for bold the text use <b>...</b> or for heading text use html heading tags etc. 
-                        if you writing sql queries or coding please use html <pre> tags and please use a class for pre tags like if you are writing sql query use class like this <pre class='code_sql'> and for python use it like <pre class='code_python'> and so on.
-                        again please define the text briefly in easy and simple language with above prompts.
-                    ");
+                $response = PostsFactory::generateGeminiContent(PostsFactory::prompt("This is MySQL chapter `{$item['title']}` and topic is `{$topic}`."));
                 $desc = PostsFactory::getTextFromResponse($response);
                 if (!$desc) {
                     $desc = 'not_exist';

@@ -2,16 +2,18 @@
     <x-slot:pageTitle>
         Home
     </x-slot:pageTitle>
-
+    @php
+        $parsedown = new Parsedown();
+    @endphp
     <x-top-screen />
     <div class="text-white mb-8">
-        <div class="flex justify-center flex-wrap h-max">
+        <div class="flex justify-center flex-wrap h-max" id="post_body">
             @foreach ($categories as $cat)
                 <section class="m-2 rounded-md p-2 mb-8 w-max bg-color" style="width:30.33333%">
                     <h2 class="text-3xl font-medium mb-4 mt-6 text-center  ">{{ $cat->title }}</h2>
                     <div class="">
                         <div class="bg-color2 py-3 rounded-md px-5" style="width:100%">
-                            {{ $cat->description }}
+                            {!! $parsedown->text($cat->description) !!}
                         </div>
                         <div class="ml-3">
                             @foreach ($cat->posts as $post)

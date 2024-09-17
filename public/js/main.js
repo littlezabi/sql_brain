@@ -42,9 +42,8 @@ const showSearch = () => {
 };
 addEventListener("DOMContentLoaded", () => {
     const codes = document.querySelectorAll("pre");
-    console.log(codes);
     codes.forEach((element) => {
-        var cmInstance = CodeMirror(
+        CodeMirror(
             (elt) => {
                 element.parentNode.replaceChild(elt, element);
             },
@@ -71,7 +70,6 @@ addEventListener("DOMContentLoaded", () => {
     try {
         const srch_cont = document.getElementById("search-cont");
         const srch_bar = document.getElementById("search-bar");
-        console.log(srch_bar);
         srch_cont.addEventListener("click", (e) => {
             srch_bar.focus();
         });
